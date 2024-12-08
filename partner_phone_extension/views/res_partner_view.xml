@@ -20,14 +20,14 @@
             <field name="phone" position="after">
                 <field name="phone_extension" string="Extn." />
             </field>
-            <xpath
+            <!-- <xpath
                 expr="//form/sheet/notebook/page/field/kanban/field[@name='phone']"
                 position="after"
             >
                 <field name="phone_extension" />
-            </xpath>
+            </xpath> -->
             <xpath
-                expr="//div[hasclass('oe_kanban_details')]/div[@t-if='record.phone.raw_value']"
+                expr="//templates/t[@t-name='card']/main/div[@t-if='record.phone.raw_value']"
                 position="after"
             >
                 <div t-if="record.phone_extension.raw_value">
